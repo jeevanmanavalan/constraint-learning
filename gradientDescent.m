@@ -11,7 +11,7 @@
 %     dimensionality : dimensionality of the data controlPTest
 % output
 %     optimal: N(q) Matrix
-function [optimal, results] = GradientDescent(controlPTrain, controlPTest, constraint,dimensionality)
+function [optimal, results] = gradientDescent(controlPTrain, controlPTest, constraint,dimensionality)
 
 A =@(t)t2Alpha(t);
 N =@(t)(eye(dimensionality)-pinv(A(t))*A(t));
